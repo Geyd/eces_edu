@@ -32,7 +32,7 @@ MEDIA_URL = "/post_image/"
 SECRET_KEY = 'znyrgcu^kn+j^vnc0@j0rc((1kpndqr%qdv2+6w05*&c+u_=va'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
