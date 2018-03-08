@@ -1,0 +1,16 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ bock.super }} - Les Professeurs
+{% endblock %}
+
+{% block contenu %}
+<h2>Les Professeurs</h2>
+<ul>
+	{% for professeur in professeur_list %}
+		<li><a href="{{ professeur.get_absolute_url }}">{{ professeur.nom|title }}</li>
+	{% empty %}
+		<li><em>Actuellement la liste est vide.</em></li>
+	{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} 
+{% endblock %}
+
+
+{% block contenu %}
+<article>
+	<h2>{{ professeur.nom }}</h2>
+	<dl>
+		<dt>Prénom du professeur:</dt>
+		<dd>{{ professeur.prenom }}</dd>
+		<dt>Adresse e-mail:</dt>
+		<dd>
+			{{ professeur.email }}
+		</dd>
+	</dl>
+</article>
+{% endblock %}

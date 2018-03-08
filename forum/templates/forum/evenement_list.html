@@ -1,0 +1,19 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - Les Evénements
+{% endblock %}
+
+{% block contenu %}
+<h2>Les Evénements</h2>
+<div>
+	<a href="{% url 'forum_evenement_create' %}">Créer un nouvel événement</a>
+</div>
+<ul>
+	{% for evenement in evenement_list %}
+		<li><a href="{{ evenement.get_absolute_url }}">{{ evenement.theme|title }}</li>
+	{% empty %}
+		<li><em>Actuellement la liste est vide.</em></li>
+	{% endfor %}
+</ul>
+{% endblock %}

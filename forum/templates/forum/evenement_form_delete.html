@@ -1,0 +1,21 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - Supprimer un événement
+{% endblock %}
+
+{% block contenu %}
+<div>
+	<div>
+		<form action="{{ evenement.get_delete_url }}" method="post">
+			{% csrf_token %}
+			<p>
+				Etes-vous de vouloir supprimer l'événement {{ evenement.theme }}?
+			</p>
+			<a href="{{ evenement.get_absolute_url }}">Annuler</a>
+			<button type="submit">Supprimer un Evénement</button>
+		</form>
+	</div>
+</div>
+		}
+{% endblock %}

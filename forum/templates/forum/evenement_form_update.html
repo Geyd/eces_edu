@@ -1,0 +1,18 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - Mettre à jour un Evénement
+{% endblock %}
+
+{% block contenu %}
+<div>
+	<div>
+		<form action="{% evenement.get_update_url %}" method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Mettre à jour un Evénement</button>
+		</form>
+	</div>
+</div>
+		}
+{% endblock %}

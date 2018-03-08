@@ -1,0 +1,16 @@
+{% extends parent_template|default:"base.html" %}
+
+{% block titre %}
+HTTP Forbidden
+{% endblock %}
+
+{% block contenu %}
+  <div class="row">
+    <div class="offset-by-two eight columns">
+      <h1>Permission Denied</h1>
+      <p>
+        You're not allowed to see this content.
+      </p>
+    </div>
+  </div>
+{% endblock %}

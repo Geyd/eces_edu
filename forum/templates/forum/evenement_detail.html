@@ -1,0 +1,22 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - {{ evenement.theme }}
+{% endblock %}
+
+
+{% block contenu %}
+<article>
+	<h2>{{ evenement.theme }}</h2>
+	<dl>
+		<dt>Date Evénement</dt>
+		<dd>{{ evenement.date_eve|date:"F jS, Y" }}</dd>
+		<dt>Contenu</dt>
+		<dd>{{ evenement.texte|linebreaks }}</dd>
+		<a href="{{ evenement.fichier.url }}">Ici télécharger le fichier {{ evenement.theme }}.</a>
+		<dt>Photo</dt>
+		<dd><img src="{{ evenement.photo.url }}"></dd>
+		
+	</dl>
+</article>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - Les Matières
+{% endblock %}
+
+{% block contenu %}
+<h2>Les Matières</h2>
+<ul>
+	{% for matiere in matiere_list %}
+		<li><a href="{{ matiere.get_absolute_url }}">{{ matiere.matiere|title }}</li>
+	{% empty %}
+		<li><em>Actuellement la liste est vide.</em></li>
+	{% endfor %}
+</ul>
+{% endblock %}

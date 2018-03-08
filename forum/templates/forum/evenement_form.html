@@ -1,0 +1,18 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - Créer un événement
+{% endblock %}
+
+{% block contenu %}
+<div>
+	<div>
+		<form action="{% url 'forum_evenement_create' %}" method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Créer un Evénement</button>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

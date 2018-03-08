@@ -1,0 +1,19 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - {{ matiere.matiere }}
+{% endblock %}
+
+{% block contenu %}
+<article>
+	<h2>{{ matiere.matiere }}</h2>
+	<dl>
+		<dt>Matière</dt>
+		<dd>{{ matiere.matiere }}</dd>
+		<dt>Enseigné par:</dt>
+		<dd>
+			{{ matiere.professeur }}
+		</dd>
+	</dl>
+</article>
+{% endblock %}

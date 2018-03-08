@@ -1,0 +1,20 @@
+{% extends parent_template|default:"forum/base_forum.html" %}
+
+{% block titre %}
+	{{ block.super }} - {{ publication.titre }}
+{% endblock %}
+
+{% block contenu %}
+<article>
+	<h2>{{ publication.titre }}</h2>
+	<dl>
+		<dt>Contenu</dt>
+		<dd>{{ publication.contenu|linebreaks }}</dd>
+		<a href="{{ publication.fichier.url }}">Ici télécharger {{ publication.titre|title }}.</a>
+		<dt>Date de Publication</dt>
+		<dd>{{ publication.date_pub|date:"F jS, Y" }}</dd>
+		<dt>Professeur</dt>
+		<dd>{{ publication.professeur }}</dd>
+	</dl>
+</article>
+{% endblock %}
