@@ -29,7 +29,7 @@ MEDIA_URL = "/post_image/"
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'znyrgcu^kn+j^vnc0@j0rc((1kpndqr%qdv2+6w05*&c+u_=va'
+SECRET_KEY = 'your key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
